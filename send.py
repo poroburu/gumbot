@@ -11,7 +11,6 @@ def create_wallet(mnemonic: str) -> LocalWallet:
     """Create a wallet from a mnemonic phrase."""
     return LocalWallet.from_mnemonic(mnemonic, 'stars')
 
-
 def get_stars_address(wallet: LocalWallet) -> str:
     """Convert a Cosmos address to Stargaze address format."""
     # Get the address as bytes
@@ -24,7 +23,6 @@ def get_stars_address(wallet: LocalWallet) -> str:
 
     # Convert to stars bech32 address
     return bech32_encode("stars", data)
-
 
 def validate_stars_address(address: str) -> bool:
     """Validate a Stargaze address format."""
